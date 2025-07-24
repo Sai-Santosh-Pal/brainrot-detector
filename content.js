@@ -1,22 +1,31 @@
-const pageText = document.body.innerText
-// console.log(pageText)
-const word = [
-    "brainrot", "rizz", "sigma", "gyatt", "delulu", "cringe", "npc", "skibidi", "bambik", "fanum tax",
-    "goofy ahh", "gigachad", "grwm", "drip", "rizzler", "sus", "yeat", "mid", "fyp", "devious", "slay",
-    "mewing", "based", "simp", "kys", "ratio", "npc energy", "sigma grindset", "idc", "idgaf", "bruh",
-    "goofy", "tiktok", "zoomies", "sheesh", "slaps", "no cap", "cap", "opinion discarded", "rizz god",
-    "top g", "troll", "we live in a society", "gaslight", "npc moment", "sussy baka", "l bozo", "touch grass",
-    "stan", "bussin", "drippy", "shesh", "tw", "rizz up", "mald", "smegma", "goblin mode", "dark academia",
-    "girl dinner", "skibidi toilet", "skibidi ohio", "broccoli haircut", "emo phase", "emo edit", "phantom rizz",
-    "babygirl", "glowup", "side eye", "bombastic", "aesthetic", "vibe check", "he's just like me fr", "it's giving",
-    "silly goofy mood", "zesty", "corecore", "fan edit", "capcut", "ohio", "sigma male", "alpha male", "femboy",
-    "degenerate", "thirst trap", "e-girl", "e-boy", "italiano cringe", "ciao bella", "papi chulo", "mamma mia",
-    "spaghetti brain", "machiavellian rizz", "glizzy", "baddie", "bffr", "audacity", "cancelled", "manifest",
-    "shadiest", "girlboss", "fypcore", "ytp", "weirdcore", "trauma dump"
-  ];
-  
-const found = keywords.some(word => pageText.toLowerCase().includes(word.toLowerCase()));
+if (!localStorage.getItem("brainrot")) {
+  console.log("NO LOGS");
+  localStorage.setItem("brainrot", JSON.stringify([]));
+  localStorage.setItem("brainrotCount", "0");
+}
 
-if (found) {
-    alert("Brainrot found")
+const pageText = document.body.innerText.toLowerCase();
+const wordList = ["brainrot", "rizz", "sigma", "gyatt", "aura", "ohio", "skibidi toilet", "dayum"];
+
+const foundWord = wordList.find(w => pageText.includes(w));
+console.log(foundWord);
+
+if (foundWord) {
+  alert("Potential brainrot found.");
+  let stored = localStorage.getItem("brainrot");
+  let arr = [];
+
+  try {
+    arr = JSON.parse(stored);
+    if (!Array.isArray(arr)) arr = [];
+  } catch (e) {
+    console.error("Invalid JSON. Resetting brainrot log.");
+    arr = [];
+  }
+
+  arr.push(foundWord);
+  localStorage.setItem("brainrot", JSON.stringify(arr));
+  localStorage.setItem("brainrotCount", arr.length.toString());
+
+  console.log("Updated brainrot log:", arr);
 }
