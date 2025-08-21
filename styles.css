@@ -1,0 +1,15 @@
+:root { color-scheme: dark light; }
+body.wrap {
+  font:13px/1.4 system-ui,sans-serif;
+  margin:0; padding:12px; min-width:360px;
+}
+header { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
+h1 { font-size:16px; margin:0; }
+h2 { font-size:14px; margin:12px 0 6px; }
+.muted { opacity:0.7; }
+.btn { border:1px solid rgba(127,127,127,.4); background:transparent; padding:6px 10px; border-radius:8px; cursor:pointer; }
+.btn.danger { border-color:#ff6b6b; }
+.list { margin:6px 0 10px; }
+.chips { display:flex; flex-wrap:wrap; gap:6px; }
+.chip { padding:4px 8px; border:1px solid rgba(127,127,127,.35); border-radius:999px; }
+canvas { display:block; width:100%; border:1px dashed rgba(127,127,127,.3); border-radius:8px; margin:6px 0; }
