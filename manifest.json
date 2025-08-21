@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Brainrot Detector + Analyzer",
+  "name": "How's Your Brainrot?",
   "version": "1.0.0",
-  "description": "Detects brainrot on web pages, alerts you, and shows analytics of your usage.",
+  "description": "Detects brainrot on web pages, alerts you, and shows analytics of your brainrot.",
   "action": {
     "default_popup": "popup.html"
   },
