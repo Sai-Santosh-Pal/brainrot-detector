@@ -6,15 +6,17 @@
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "logo.jpg",
-      "48": "logo.jpg",
-      "128": "logo.jpg"
+      "16": "icon.png",
+      "48": "icon.png",
+      "32": "icon.png",
+      "128": "icon.png"
     }
   },
   "icons": {
-    "16": "logo.jpg",
-    "48": "logo.jpg",
-    "128": "logo.jpg"
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
   },
   "permissions": ["storage", "activeTab"],
   "host_permissions": ["<all_urls>"],
